@@ -1,0 +1,12 @@
+<h1>
+List of Registered Bands
+</h1>
+
+<% @bands.each do |band| %>
+  <li>
+    <%= band.name %>
+    <a href="<%=band_url(band.id)%>">bio</a>
+  </li>
+<% end %>
+
+<a href=" <%= new_band_url %> ">Create new band</a>
